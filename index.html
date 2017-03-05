@@ -1,29 +1,31 @@
 <!DOCTYPE HTML>
 
 <html>
+
 <head>
     <meta charset="utf-8">
 
     <title>Firebase Demo!</title>
 
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link type="text/javascript">
 </head>
 
 <body>
-    
-    <script>// src="index.js"></script>
+
     <div class="main">
         <h1>My Awesome Grades Database using Firebase!</h1>
-        <span>Subject Name</span>
-        <input type="text" id="subject" placeholder="Enter the subject name here!">
+        <span>Course Code</span>
+        <input type="text" id="code" placeholder="Enter the code of the course here!">
+        <span>Course Name</span>
+        <input type="text" id="course" placeholder="Enter the name of the course here!">
         <span>Credit Hours</span>
-        <input type="number" id="credits" placeholder="Enter credit hours!">
+        <input type="number" id="credits" min=1 placeholder="Enter the credit hours this course is worth!">
         <span>Grade Achieved</span>
         <input type="text" id="grade" placeholder="Place that 'A' right here!">
 
         <input type="submit" name="submit">
     </div>
-    
+
 </body>
+
 </html>
