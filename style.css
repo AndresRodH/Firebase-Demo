@@ -2,9 +2,9 @@ body {
     background-color: #555;
 }
 
-::-webkit-input-placeholder {
+/*::-webkit-input-placeholder {
     color: lightgray;
-}
+}*/
 
 .main {
     padding: 70px 0;

@@ -23,9 +23,25 @@
         <span>Grade Achieved</span>
         <input type="text" id="grade" placeholder="Place that 'A' right here!">
 
-        <input type="submit" name="submit">
+        <input type="submit" id="submit" onclick="send()">
     </div>
 
+    <!-- Initialize Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDmyDrF9kpDWkmchGbUYMSun8GctaTdqLQ",
+        authDomain: "grades-2ca75.firebaseapp.com",
+        databaseURL: "https://grades-2ca75.firebaseio.com",
+        storageBucket: "grades-2ca75.appspot.com",
+        messagingSenderId: "685029766352"
+    };
+    firebase.initializeApp(config);
+    </script>
+
+    <!-- Add javascript file -->
+    <script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>
