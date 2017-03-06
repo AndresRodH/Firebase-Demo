@@ -3,7 +3,10 @@ var course = document.getElementById("course");
 var credits = document.getElementById("credits");
 var grade = document.getElementById("grade");
 
+// get a reference for the courses node
 var firebaseCoursesRef = firebase.database().ref('courses');
+// get a reference fot the GPA node
+var GPARef = firebase.database().ref('GPA');
 
 firebaseCoursesRef.on('value', function(snapshot){
 
@@ -21,8 +24,6 @@ firebaseCoursesRef.on('value', function(snapshot){
         totalCredits += parseInt(courseSnapshot.val().credits);
     });
 
-    // get a reference to GPA
-    var GPARef = firebase.database().ref('GPA');
     // calculate GPA
     var GPA = (totalWeightGrade/totalCredits).toFixed(2);
     
