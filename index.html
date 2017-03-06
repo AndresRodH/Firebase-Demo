@@ -14,18 +14,40 @@
 
     <div class="main">
         <h1>My Awesome Grades Database using Firebase!</h1>
-        <span>Course Code</span>
+        Course Code
         <input type="text" id="code" placeholder="Enter the code of the course here!">
-        <span>Course Name</span>
+        Course Name
         <input type="text" id="course" placeholder="Enter the name of the course here!">
-        <span>Credit Hours</span>
+        Credit Hours
         <input type="number" id="credits" min=1 placeholder="Enter the credit hours this course is worth!">
-        <span>Grade Achieved</span>
+        Grade Achieved
         <input type="text" id="grade" placeholder="Place that 'A' right here!">
 
-        <input type="submit" name="submit">
+        <input type="submit" id="submit" onclick="send()">
+        <div class="results">
+            Cumulative GPA: <span id="gpa"></span>
+        </div>
+        <div class="results">
+            Total Credit Hours: <span id="totCred"></span>
+        </div>
     </div>
 
+    <!-- Initialize Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDmyDrF9kpDWkmchGbUYMSun8GctaTdqLQ",
+        authDomain: "grades-2ca75.firebaseapp.com",
+        databaseURL: "https://grades-2ca75.firebaseio.com",
+        storageBucket: "grades-2ca75.appspot.com",
+        messagingSenderId: "685029766352"
+    };
+    firebase.initializeApp(config);
+    </script>
+
+    <!-- Add javascript file -->
+    <script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>
